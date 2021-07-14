@@ -32,11 +32,11 @@
 - name: Git checkout website
   become: yes
   git:
-    repo: https://github.com/LoicMAURER/DevOPS/
-    dest: /home/ubuntu/
+    repo: https://github.com/LoicMAURER/DevOPS
+    dest: /home/ubuntu
     
 - name: Move Website
-  command: mv /home/ubuntu/DevOPS/sample-ticket-site/* /var/www/html/
+  command: mv /home/ubuntu/DevOPS/sample-ticket-site/* /var/www/html
   notify:
     - restart apache2
 
