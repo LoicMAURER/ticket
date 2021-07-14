@@ -10,6 +10,10 @@
 - name: ensure apache is at the latest version
   become: yes
   apt: name=apache2 update_cache=yes state=latest
+  
+- name: install php
+  become: yes
+  apt: name=php update_cache=yes state=latest
 
 - name: enabled mod_rewrite
   become: yes
