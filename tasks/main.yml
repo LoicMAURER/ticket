@@ -33,11 +33,11 @@
   become: yes
   git:
     repo: https://github.com/LoicMAURER/DevOPS
-    dest: /repo/test
+    dest: ./repo/test
     
 - name: Move Website
   become: yes
-  command: mv /repo/test/DevOPS/sample-ticket-site /var/www/html
+  command: mv ./repo/test/DevOPS/sample-ticket-site /var/www/html
   notify:
     - restart apache2
 
