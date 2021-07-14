@@ -32,8 +32,11 @@
 - name: Git checkout website
   become: yes
   git:
-    repo: https://github.com/cloudacademy/static-website-example
-    dest: /var/www/html
+    repo: https://github.com/LoicMAURER/DevOPS/
+    dest: /home/ubuntu/
+    
+- name: Move Website
+  command: mv /home/ubuntu/DevOPS/sample-ticket-site/* /var/www/html/
   notify:
     - restart apache2
 
