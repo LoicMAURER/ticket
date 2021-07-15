@@ -15,6 +15,10 @@
   become: yes
   apt: name=php update_cache=yes state=latest
 
+- name: install mysql-client
+  become: yes
+  apt: name=mysql-client update_cache=yes state=latest
+
 - name: enabled mod_rewrite
   become: yes
   apache2_module: name=rewrite state=present
